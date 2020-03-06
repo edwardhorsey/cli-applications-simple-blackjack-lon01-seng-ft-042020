@@ -30,20 +30,25 @@ display_card_total(initial)
 initial
 end
 
+def invalid_command
+puts "Please enter a valid command"
+end
+
 def hit?(num)
+sum=num
 prompt_user
 player_input = get_user_input
 unless player_input == "h" || "s"
 invalid_command
-if player_input == "h"
-num += deal_card
+prompt_user
 end
-return num
+if player_input == "h"
+sum += deal_card
+end
+sum
 end
 
-def invalid_command
-puts "Please enter a valid command"
-end
+
 
 #####################################################
 # get every test to pass before coding runner below #

@@ -41,6 +41,7 @@ player_input = get_user_input
 unless player_input == "h" || "s"
 invalid_command
 prompt_user
+get_user_input
 end
 if player_input == "h"
 sum += deal_card

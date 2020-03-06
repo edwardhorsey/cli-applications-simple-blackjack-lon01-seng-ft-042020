@@ -38,13 +38,14 @@ def hit?(num)
 sum=num
 prompt_user
 player_input = get_user_input
-unless player_input == "h" || "s"
+if player_input == "h"
+sum += deal_card
+elsif player_input == "s"
+return sum
+else
 invalid_command
 prompt_user
 get_user_input
-end
-if player_input == "h"
-sum += deal_card
 end
 sum
 end
